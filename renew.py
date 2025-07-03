@@ -1,18 +1,18 @@
-import requests,json,time,os,threading 
+\import requests,json,time,os,threading 
 from flask import Flask, jsonify, request
 app = Flask(__name__)
 PORT = int(os.environ.get("PORT", 5000))
 login_data = {
-    "username": "TUNGKOBELL", # đổi thành username acc mcserver vào đây
+    "username": "tài khoản", # đổi thành username acc mcserver vào đây
     "email": "", # hoặc dùng mail để mail thì thôi username 
     "password": {
-        "value": "Supermc123!", # password điền vào 
+        "value": "mật khẩu", # password điền vào 
         "repeat": ""
     }
 }
-login_url = "https://www.mcserverhost.com/api/login"
-sub_url = "https://www.mcserverhost.com/api/servers/fd4e4ba5/dashboard" # dán vào đây
- def run_automation():
+login_url = "https://www.mcserverhost.com/login"
+sub_url = "https://www.mcserverhost.com/api/servers/e2dfa80d/subscription" # dán vào đây 
+def run_automation():
     session = requests.Session()
     while True:
         response = session.post("https://www.mcserverhost.com/api/login", headers={'Content-Type': 'application/json'}, data=json.dumps(login_data))
