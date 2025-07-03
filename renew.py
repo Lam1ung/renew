@@ -10,11 +10,9 @@ login_data = {
         "repeat": ""
     }
 }
-
 login url = "https://www.mcserverhost.com/login"
 sub_url = "https://www.mcserverhost.com/servers/fd4e4ba5/dashboard" # dán vào đây
- 
-def run_automation():
+ def run_automation():
     session = requests.Session()
     while True:
         response = session.post("https://www.mcserverhost.com/api/login", headers={'Content-Type': 'application/json'}, data=json.dumps(login_data))
