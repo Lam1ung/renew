@@ -10,7 +10,10 @@ login_data = {
         "repeat": ""
     }
 }
-sub_url = "https://www.mcserverhost.com/servers/fd4e4ba5/dashboard" # dán vào đây 
+
+login url = "https://www.mcserverhost.com/api/login"
+sub_url = "https://www.mcserverhost.com/api/servers/fd4e4ba5/dashboard" # dán vào đây
+ 
 def run_automation():
     session = requests.Session()
     while True:
